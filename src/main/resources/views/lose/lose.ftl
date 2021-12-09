@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>营销机会管理</title>
+    <title>丢失物品管理</title>
     <#include "../common.ftl">
 </head>
 <body class="childrenBody">
@@ -11,20 +11,9 @@
         <form class="layui-form">
             <div class="layui-inline">
                 <div class="layui-input-inline">
-                    <input type="text" name="customerName"
+                    <input type="text" name="loseName"
                            class="layui-input
-							searchVal" placeholder="客户名" />
-                </div>
-                <div class="layui-input-inline">
-                    <input type="text" name="createMan" class="layui-input
-							searchVal" placeholder="创建人" />
-                </div>
-                <div class="layui-input-inline">
-                    <select name="state"  id="state">
-                        <option value="" >分配状态</option>
-                        <option value="0">未分配</option>
-                        <option value="1" >已分配</option>
-                    </select>
+							searchVal" placeholder="丢失物品名称" />
                 </div>
                 <a class="layui-btn search_btn" data-type="reload">
                     <i class="layui-icon">&#xe615;</i> 搜索
@@ -34,7 +23,7 @@
     </blockquote>
 
     <!-- 数据表格 -->
-    <table id="saleChanceList" class="layui-table"  lay-filter="saleChances">
+    <table id="loseList" class="layui-table"  lay-filter="lose">
     </table>
 
     <script type="text/html" id="toolbarDemo">
@@ -52,13 +41,12 @@
 
 
     <!--操作-->
-    <script id="saleChanceListBar" type="text/html">
-        <a class="layui-btn layui-btn-xs" id="edit" lay-event="edit">编辑</a>
+    <script id="loseListBar" type="text/html">
         <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
     </script>
 
 </form>
 
-<script type="text/javascript" src="${ctx}/js/saleChance/saleChance.js"></script>
+<script type="text/javascript" src="${ctx}/js/lose/lose.js"></script>
 </body>
 </html>
